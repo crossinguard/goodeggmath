@@ -11,26 +11,29 @@ export default defineConfig({
       dark: './src/assets/logo-light-sm.svg',
       replacesTitle: true,
     },
-    // social: {
-    //   github: 'https://github.com/withastro/starlight'
-    // },
+    social: {
+      github: 'https://github.com/crossinguard'
+    },
     customCss: [
       // Relative path to your custom CSS file
       './src/styles/custom.css',
     ],
     sidebar: [{
-      label: 'Getting Stated',
-      items: [
-      // Each item here is one entry in the navigation menu.
-      {
-        label: 'Example Guide',
-        link: '/guides/example/'
-      }]
+      label: 'Getting Started',
+      link: '/getting-started/',
+    }, {
+      label: 'Learn',
+      autogenerate: {
+        directory: 'learn'
+      }
     }, {
       label: 'Reference',
       autogenerate: {
         directory: 'reference'
       }
+    }, {
+      label: 'About',
+      link: '/about/',
     }]
   })]
 });
