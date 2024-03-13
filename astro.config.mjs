@@ -1,8 +1,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-import db from "@astrojs/db";
-
 // https://astro.build/config
 export default defineConfig({
   site: 'https://goodeggmath.com/',
@@ -29,5 +27,5 @@ export default defineConfig({
         directory: 'reference'
       }
     }]
-  }), db()]
+  })]
 });
