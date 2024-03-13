@@ -5,13 +5,18 @@ import db from "@astrojs/db";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://goodeggmath.com/',
   integrations: [starlight({
-    title: 'My Docs',
-    social: {
-      github: 'https://github.com/withastro/starlight'
-    },
+    title: 'good egg',
+    // social: {
+    //   github: 'https://github.com/withastro/starlight'
+    // },
+    customCss: [
+      // Relative path to your custom CSS file
+      './src/styles/custom.css',
+    ],
     sidebar: [{
-      label: 'Guides',
+      label: 'Getting Stated',
       items: [
       // Each item here is one entry in the navigation menu.
       {
