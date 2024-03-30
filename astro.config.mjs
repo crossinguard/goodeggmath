@@ -22,10 +22,24 @@ export default defineConfig({
       label: 'Getting Started',
       link: '/getting-started/',
     }, {
-      label: 'Learn',
-      autogenerate: {
-        directory: 'learn'
-      }
+      label: 'Types of Numbers',
+      items: [
+        {label: 'Overview', link: '/learn/number-types/overview'},
+      ],
+      badge: {text: 'under construction'}
+    }, {
+      label: 'Arithmetic Operations',
+      items: [
+        {label: 'Overview', link: '/learn/arithmetic-operations/overview'},
+        {label: 'Addition', link: '/learn/arithmetic-operations/addition'},
+        {label: 'Subtraction', link: '/learn/arithmetic-operations/subtraction'},
+        {label: 'Multiplication', link: '/learn/arithmetic-operations/multiplication'},
+        {label: 'Division', link: '/learn/arithmetic-operations/division'},
+        {label: 'Floor Division', link: '/learn/arithmetic-operations/floor-division'},
+        {label: 'Modulus', link: '/learn/arithmetic-operations/modulus'},
+        {label: 'Exponents', link: '/learn/arithmetic-operations/exponents'}
+      ],
+      badge: {text: 'under construction'}
     }, {
       label: 'Reference',
       autogenerate: {
