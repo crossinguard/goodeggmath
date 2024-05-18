@@ -6,6 +6,7 @@
     "language": "en",
     "nav": [
       { "url": "/", "name": "Home" },
+      { "url": "/tutoring", "name": "Tutoring" },
       { "url": "/about", "name": "About" }
     ]
   },
@@ -16,6 +17,11 @@
         "name": "Email",
         "url": "mailto:info@goodeggmath.com",
         "icon": "envelope"
+      },
+      {
+        "name": "Website",
+        "url": "https://crossinguard.dev/",
+        "icon": "globe"
       },
       {
         "name": "LinkedIn",

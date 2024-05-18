@@ -1,5 +1,14 @@
+---
+interface Website {
+  title: string;
+}
+
+import site from '../data/site.json';
+const { website }: { website: Website } = site;
+---
+
 <div class="logo skew shadow">
-  <a href="/" class="fancy link">Good Egg Math</a>
+  <a href="/" class="fancy link">{website.title}</a>
 </div>
 
 <style>
