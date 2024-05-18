@@ -1,0 +1,44 @@
+---
+interface Props {
+  headings: { depth: number; text: string; slug: string }[];
+}
+
+const { headings } = Astro.props;
+---
+
+<div class="page-nav">
+  <ul class="nav-items">
+    {
+      headings.map((heading) => (
+        <li class="nav-item">
+          <a href={`#${heading.slug}`}>{heading.text}</a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style>
+  .page-nav {
+    position: -webkit-sticky;
+    position: sticky;
+    inset-block-start: 0.5em;
+    padding: 1em 0;
+    z-index: 1;
+    background-color: var(--light);
+    opacity: 0.9;
+    border-radius: 0.5em;
+    width: fit-content;
+    margin-inline: 0 auto;
+  }
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    list-style: none;
+    padding-inline: 1em;
+  }
+  .nav-item a {
+    text-decoration: none;
+  }
+</style>

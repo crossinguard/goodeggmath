@@ -1,0 +1,28 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { MarkdownLayoutProps } from 'astro';
+// import HeaderNav from '../components/HeaderNav.astro';
+import '../styles/mdx.css';
+
+type Props = MarkdownLayoutProps<{
+  title: string;
+  author: string;
+}>;
+
+const { frontmatter, headings } = Astro.props;
+---
+
+<BaseLayout title={frontmatter.title}>
+  <!-- <HeaderNav headings={headings} /> -->
+  <div class="content shadow mdx">
+    <h1>{frontmatter.title}</h1>
+    <slot />
+  </div>
+</BaseLayout>
+
+<style>
+  .mdx {
+    padding: 2em;
+    margin-block: 3em;
+  }
+</style>

@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Atkinson';
+  src: url('/fonts/atkinson-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson';
+  src: url('/fonts/atkinson-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Modesty';
+  src: url('/fonts/Modesty.woff') format('woff'),
+    url('/fonts/Modesty.woff2') format('woff2'),
+    url('/fonts/Modesty.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'VictorMono';
+  src: url('/fonts/VictorMono-Regular.woff2') format('woff2'),
+    url('/fonts/VictorMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-family-sans: 'Atkinson', sans-serif;
+  --font-family-fancy: 'Modesty', serif;
+  --font-family-mono: 'VictorMono', monospace;
+}

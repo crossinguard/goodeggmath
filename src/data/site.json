@@ -1,0 +1,27 @@
+{
+  "website": {
+    "title": "Good Egg Math",
+    "description": "Mathematics tutoring and learning resources for learners of all ages and backgrounds.",
+    "url": "https://goodeggmath.com/",
+    "language": "en",
+    "nav": [
+      { "url": "/", "name": "Home" },
+      { "url": "/about", "name": "About" }
+    ]
+  },
+  "author": {
+    "name": "W. Brett Egbert",
+    "social": [
+      {
+        "name": "Email",
+        "url": "mailto:info@goodeggmath.com",
+        "icon": "envelope"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/w-brett-egbert/",
+        "icon": "linkedin-logo"
+      }
+    ]
+  }
+}

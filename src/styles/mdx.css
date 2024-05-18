@@ -1,0 +1,19 @@
+.mdx {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h1::before {
+    content: '{ ';
+    color: var(--primary);
+  }
+  h1::after {
+    content: ' }';
+    color: var(--primary);
+  }
+  :is(h1, h2, h3) {
+    text-align: center;
+  }
+}

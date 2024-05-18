@@ -1,0 +1,38 @@
+---
+import Social from './Social.astro';
+
+interface Author {
+  name: string;
+}
+
+import site from '../data/site.json';
+const { author }: { author: Author } = site;
+const today = new Date();
+---
+
+<footer>
+  <div class="flex shadow skew">
+    <p>{author.name} &copy; {today.getFullYear()}</p>
+    <Social />
+    <p>stay curious</p>
+  </div>
+</footer>
+
+<style>
+  .flex {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-mono);
+    margin-block: 4em;
+    background: var(--light);
+    padding: 1em;
+    text-align: center;
+    width: fit-content;
+    margin-inline: auto;
+  }
+
+  p:last-child {
+    font-style: italic;
+    font-size: smaller;
+  }
+</style>

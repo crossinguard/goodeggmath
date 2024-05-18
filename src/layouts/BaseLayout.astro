@@ -1,0 +1,64 @@
+---
+import Footer from '../components/Footer.astro';
+import Nav from '../components/Nav.astro';
+
+import '../styles/reset.css';
+import '../styles/fonts.css';
+import '../styles/colors.css';
+import '../styles/utils.css';
+import '../styles/icons.css';
+import '../styles/global.css';
+
+interface Website {
+  title: string;
+  description: string;
+  language: string;
+}
+interface Props {
+  title: string;
+}
+
+import site from '../data/site.json';
+const { website }: { website: Website } = site;
+const { title } = Astro.props;
+---
+
+<html lang={website.language}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      property="og:description"
+      content={website.description}
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>{title} | {website.title}</title>
+  </head>
+
+  <body id="body-grid" class="pattern">
+    <Nav />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  #body-grid {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+
+    /* fallback height */
+    min-height: 100vh;
+
+    /* new small viewport height for modern browsers */
+    min-height: 100svh;
+  }
+</style>
