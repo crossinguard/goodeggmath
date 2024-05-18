@@ -1,4 +1,6 @@
 ---
+import SiteLogo from './SiteLogo.astro';
+
 interface Nav {
   url: string;
   name: string;
@@ -14,9 +16,7 @@ const { website }: { website: Website } = site;
 
 <header>
   <nav class="navbar">
-    <div class="brand">
-      <a href="/" class="fancy logo">Good Egg Math</a>
-    </div>
+    <SiteLogo />
     <ul class="nav-links shadow">
       {
         website.nav.map(({ name, url }) => (
@@ -43,9 +43,6 @@ const { website }: { website: Website } = site;
 </header>
 
 <style>
-  header {
-    background: linear-gradient(to bottom, var(--light), transparent);
-  }
   .navbar {
     display: flex;
     flex-wrap: wrap;
@@ -56,14 +53,6 @@ const { website }: { website: Website } = site;
     width: 90%;
     max-width: 1100px;
     margin-inline: auto;
-  }
-
-  .logo {
-    text-decoration: none;
-    color: var(--light);
-    font-size: 3.5rem;
-    text-shadow: 0.05rem 0.1rem var(--black);
-    filter: drop-shadow(0 0 0.1rem var(--dark));
   }
 
   .nav-links {
