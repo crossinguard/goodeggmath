@@ -74,7 +74,7 @@ const { website }: { website: Website } = site;
       1.5rem
     );
     border-block: 4px solid transparent;
-    transition: all 0.2s ease-in-out;
+    transition: var(--transition);
     display: inline-block;
   }
 
@@ -88,11 +88,4 @@ const { website }: { website: Website } = site;
     background-color: var(--dark);
     border-block-end: 4px solid var(--primary);
   }
-
-  /* @media (max-width: 500px) {
-    .navbar {
-      outline: solid red;
-      justify-content: center;
-    }
-  } */
 </style>

@@ -1,0 +1,36 @@
+---
+interface Props {
+  text: string;
+  link: string;
+}
+
+const { text, link } = Astro.props;
+---
+
+<div class="center">
+  <div class="button skew">
+    <a href={link}>{text}</a>
+  </div>
+</div>
+
+<style>
+  .button {
+    display: inline-block;
+    background-color: var(--primary);
+    padding: 0.5em;
+    transition: var(--transition);
+
+    a {
+      color: var(--light);
+      font-weight: 700;
+      font-size: 1.5rem;
+      display: block;
+      text-decoration: none;
+      text-shadow: 0.05rem 0.1rem var(--dark);
+      filter: drop-shadow(0 0 0.1rem var(--dark));
+    }
+    a:hover {
+      text-shadow: 0.05rem 0.1rem var(--secondary);
+    }
+  }
+</style>

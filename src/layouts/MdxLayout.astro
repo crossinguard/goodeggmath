@@ -1,7 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import type { MarkdownLayoutProps } from 'astro';
-import Top from '../components/Top.astro';
 // import HeaderNav from '../components/HeaderNav.astro';
 import '../styles/mdx.css';
 
@@ -18,7 +17,6 @@ const { frontmatter, headings } = Astro.props;
   <div class="content shadow mdx">
     <!-- <h1>{frontmatter.title}</h1> -->
     <slot />
-    <Top />
   </div>
 </BaseLayout>
 

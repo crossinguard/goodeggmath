@@ -33,7 +33,7 @@ h5 {
 
 a {
   color: var(--primary);
-  transition: all 0.2s ease-in-out;
+  transition: var(--transition);
   text-underline-offset: 0.25em;
 }
 

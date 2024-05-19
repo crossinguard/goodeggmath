@@ -3,10 +3,16 @@ layout: ../layouts/MdxLayout.astro
 title: Home
 ---
 
+import Button from '../components/Button.astro';
+import { Icon } from 'astro-icon/components';
+
 ## Free Math Tutoring!
 
-Starting June 3, 2024, I will be offering **free** math tutoring at the [Sumas Library](https://www.wcls.org/about-wcls/#su) every Monday @3pm in partnership with the [Whatcom County Library System](https://www.wcls.org/).
+<span class="tutoring-when">
+  <Icon name="calendar-check" />
+  Every Monday @3pm
+</span>
 
-`Find out more!`
+Starting June 3, 2024, I will be offering **free** math tutoring at the [Sumas Library](https://www.wcls.org/about-wcls/#su) in partnership with the [Whatcom County Library System](https://www.wcls.org/).
 
-Math is worth knowing, and things worth knowing shouldn't be miserable to learn.
+<Button text="Find out more!" link="/tutoring" />
