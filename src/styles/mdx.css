@@ -14,6 +14,7 @@
   h2 {
     font-size: 2rem;
     text-align: center;
+    line-height: 1.25;
   }
   h3 {
     text-decoration: underline;
@@ -34,11 +35,20 @@
     background-color: var(--light);
     color: var(--dark);
     padding-block: 1em;
+    min-width: fit-content;
+    max-width: 75%;
+    margin-inline: auto;
     p {
       padding: 0;
     }
   }
   .button {
+    margin-block: 1em;
+  }
+  .first-word {
+    font-size: 2.75rem;
+  }
+  hr {
     margin-block: 1em;
   }
 }

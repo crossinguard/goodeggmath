@@ -43,4 +43,5 @@
   --light: var(--gray-0);
   --primary: var(--pink-5);
   --secondary: var(--pink-7);
+  --tertiary: var(--teal-1);
 }

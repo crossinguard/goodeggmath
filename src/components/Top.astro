@@ -2,15 +2,30 @@
 import { Icon } from 'astro-icon/components';
 ---
 
-<a href="#" class="top-link center"><Icon name="arrow-line-up" /></a>
+<div class="top-container">
+  <a href="#" class="top-link center"><Icon name="arrow-line-up" /></a>
+</div>
 
 <style>
+  .top-container {
+    border-block-start: solid var(--gray-6);
+    margin-block: 0 2em;
+    text-align: center;
+  }
+  .top-container::after {
+    content: 'return to top';
+    font-style: italic;
+    color: var(--gray);
+    font-size: 0.75rem;
+  }
   .top-link {
     border-radius: 0 0 0.5rem 0.5rem;
-    border: solid var(--gray-6);
+    border-inline: solid var(--gray-6);
+    border-block-end: solid var(--gray-6);
     width: 5rem;
     margin-inline: auto;
-    padding-block: 0 0.5em;
-    margin-block: 2em;
+  }
+  [data-icon] {
+    margin-block-end: 0.25em;
   }
 </style>
