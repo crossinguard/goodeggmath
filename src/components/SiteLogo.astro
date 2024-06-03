@@ -1,33 +1,19 @@
 ---
-interface Website {
-  title: string;
-}
-
-import site from '../data/site.json';
-const { website }: { website: Website } = site;
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.svg';
 ---
 
-<div class="logo skew shadow">
-  <a href="/" class="fancy link">{website.title}</a>
-</div>
+<a href="/" class="logo-link">
+  <Image src={logo} alt="Good Egg Math" class="logo-image" width="500" />
+</a>
 
 <style>
-  .logo {
-    background: var(--primary);
-    border: solid 0.5rem var(--tertiary);
-  }
-  .link {
-    display: block;
-    text-decoration: none;
-    color: var(--light);
-    font-size: 2.5rem;
-    padding: 0.15rem 0.5rem;
-    text-shadow: 0.05rem 0.1rem var(--black);
-    filter: drop-shadow(0 0 0.1rem var(--dark));
+  .logo-image {
+    height: auto;
+    /* width: 30rem; */
     transition: var(--transition);
-    text-align: center;
   }
-  .link:hover {
-    text-shadow: 0.05rem 0.1rem var(--secondary);
+  .logo-image:hover {
+    transform: scale(1.03);
   }
 </style>

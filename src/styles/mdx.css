@@ -46,7 +46,9 @@
     margin-block: 1em;
   }
   .first-word {
-    font-size: 2.75rem;
+    text-decoration: underline dotted var(--primary);
+    text-decoration-thickness: 0.25rem;
+    /* font-size: 2.25rem; */
   }
   hr {
     margin-block: 1em;

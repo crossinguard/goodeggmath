@@ -2,14 +2,6 @@
   --transition: all 0.2s ease-in-out;
 }
 
-.fancy {
-  font-family: var(--font-family-fancy);
-}
-
-.mono {
-  font-family: var(--font-family-mono);
-}
-
 .content {
   width: 90%;
   max-width: 800px;
@@ -41,7 +33,11 @@
 }
 
 .pattern {
-  background: url('../assets/memphis.svg');
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url('../assets/memphis.svg');
   background-size: 30%;
 }
 
