@@ -1,18 +1,24 @@
 .mdx {
   h1 {
-    font-size: 3rem;
+    font-size: var(--step-0);
     text-align: center;
+    background: var(--tertiary);
+    color: var(--dark);
+    width: fit-content;
+    margin-inline: auto;
+    padding: 0.5rem 1rem;
+    box-shadow: 0.5rem 0.35rem var(--primary);
   }
-  h1::before {
+  h2::before {
     content: '{ ';
     color: var(--primary);
   }
-  h1::after {
+  h2::after {
     content: ' }';
     color: var(--primary);
   }
   h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     line-height: 1.25;
   }
@@ -48,7 +54,6 @@
   .first-word {
     text-decoration: underline dotted var(--primary);
     text-decoration-thickness: 0.25rem;
-    /* font-size: 2.25rem; */
   }
   hr {
     margin-block: 1em;
