@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+import { Icon } from 'astro-icon/components';
+import Contact from '../components/Contact.astro';
+
+// import '../styles/mdx.css';
+
+const title = 'Home';
+---
+
+<BaseLayout title={title}>
+  <section class="content shadow tutoring">
+    <h1>Ask a Math Teacher</h1>
+
+    <div class="tutoring-when">
+      <p>
+        <Icon name="calendar-check" />
+        Mondays @ 3:00 - 4:30 pm
+      </p>
+    </div>
+    <p>
+      Stop by the Sumas Library for <span class="free">free</span> weekly math help.
+      Walk-ins welcome.
+    </p>
+    <Button text="Find out more!" link="/tutoring" />
+    <p>
+      Or fill out the <a href="#contact">contact form</a> to send your questions
+      to a Washington-certified mathematics instructor.
+    </p>
+  </section>
+  <section class="categories">
+    <h2>Wondering if this is for you?</h2>
+    <div class="content">
+      <p>
+        If you fall into any of the following categories, then the <span
+          class="free">free</span
+        > weekly sessions of <span class="ask">Ask a Math Teacher</span> are for
+        you!
+      </p>
+      <ul class="categories-list">
+        <li>home-schoolers, summer-schoolers, and school-shoolers</li>
+        <li>adult learners, second winders, and upskillers</li>
+        <li>parents, guardians, BFFs, and acquaintances of math students</li>
+        <li>people who like numbers and see patterns everywhere</li>
+        <li>people who hate numbers and can't seem to get away from them</li>
+        <li>builders, bakers, and candlestick-makers</li>
+        <li>fans of the metric system of measurement</li>
+        <li>fans of the US customary & imperial systems of measurement</li>
+        <li>
+          people who didn't know there were multiple systems of measurement
+        </li>
+        <li>anybody who is kept up at night by the idea of infinity</li>
+      </ul>
+    </div>
+  </section>
+  <section id="contact">
+    <Contact />
+  </section>
+</BaseLayout>
+
+<style>
+  .tutoring {
+    padding: 2em;
+    margin-block: 3em;
+    text-align: center;
+    color: var(--light);
+    background-color: var(--dark);
+  }
+  h1 {
+    padding: 0.5rem 1rem;
+  }
+  h1::before {
+    content: '{ ';
+    color: var(--primary);
+  }
+  h1::after {
+    content: ' }';
+    color: var(--primary);
+  }
+  h2 {
+    text-align: center;
+  }
+  .tutoring-when {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--light);
+    color: var(--dark);
+    padding-block: 1em;
+    min-width: fit-content;
+    max-width: 75%;
+    margin-inline: auto;
+    p {
+      padding: 0;
+    }
+  }
+  [data-icon] {
+    margin-inline: auto;
+  }
+  .free {
+    text-decoration: underline dotted var(--primary);
+    text-underline-offset: 0.25em;
+    text-decoration-thickness: 0.25rem;
+    font-style: italic;
+  }
+  .categories {
+    margin-inline: auto;
+    color: var(--dark);
+    background-color: var(--light-transparent);
+    margin-block: 3em;
+    max-width: 60ch;
+  }
+  .categories-list {
+    text-align: left;
+  }
+</style>

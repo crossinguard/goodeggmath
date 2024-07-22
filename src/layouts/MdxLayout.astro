@@ -9,7 +9,7 @@ type Props = MarkdownLayoutProps<{
   author: string;
 }>;
 
-const { frontmatter, headings } = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout title={frontmatter.title}>
@@ -24,5 +24,9 @@ const { frontmatter, headings } = Astro.props;
   .mdx {
     padding: 2em;
     margin-block: 3em;
+  }
+  .content {
+    background-color: var(--dark);
+    color: var(--light);
   }
 </style>

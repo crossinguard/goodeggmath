@@ -41,6 +41,7 @@
   --dark: var(--gray-8);
   --gray: var(--gray-5);
   --light: var(--gray-0);
+  --light-transparent: hsla(210, 17%, 98%, 0.75);
   --primary: var(--pink-5);
   --secondary: var(--pink-7);
   --tertiary: var(--teal-1);

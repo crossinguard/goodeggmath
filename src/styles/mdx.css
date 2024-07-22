@@ -6,6 +6,7 @@
     color: var(--dark);
     width: fit-content;
     margin-inline: auto;
+    margin-block-end: 1rem;
     padding: 0.5rem 1rem;
     box-shadow: 0.5rem 0.35rem var(--primary);
   }
@@ -34,7 +35,7 @@
     text-align: center;
     list-style: none;
   }
-  .tutoring-when {
+  /* .tutoring-when {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,7 +48,7 @@
     p {
       padding: 0;
     }
-  }
+  } */
   .button {
     margin-block: 1em;
   }

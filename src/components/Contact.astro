@@ -1,0 +1,126 @@
+<div class="contact content">
+  <h2>Contact Form</h2>
+  <h3 class="ask">Ask a Math Teacher</h3>
+  <form
+    name="ContactForm"
+    method="POST"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    id="contact-form"
+    class="contact-form"
+  >
+    <p class="sr-only">
+      <label id="contact-form-bot-label"
+        >Don't fill this out if you're human: <input
+          name="bot-field"
+          aria-labelledby="contact-form-bot-label"
+        /></label
+      >
+    </p>
+    <p class="form-row">
+      <label
+        id="contact-form-name-label"
+        for="contact-form-name"
+        class="form-label">Name</label
+      >
+      <input
+        type="text"
+        name="name"
+        id="contact-form-name"
+        aria-labelledby="contact-form-name-label"
+        class="form-input"
+        required
+      />
+    </p>
+    <p class="form-row">
+      <label
+        id="contact-form-email-label"
+        for="contact-form-email"
+        class="form-label">Email address</label
+      >
+      <input
+        type="email"
+        name="email"
+        id="contact-form-email"
+        aria-labelledby="contact-form-email-label"
+        class="form-input"
+        required
+      />
+    </p>
+    <p class="form-row">
+      <label
+        id="contact-form-message-label"
+        for="contact-form-message"
+        class="form-label">Message</label
+      >
+      <textarea
+        name="message"
+        id="contact-form-message"
+        aria-labelledby="contact-form-message-label"
+        class="form-textarea"
+        rows="7"
+        required></textarea>
+    </p>
+    <p class="form-row form-submit">
+      <button type="submit" class="button">Send Message</button>
+    </p>
+  </form>
+</div>
+
+<style>
+  .contact {
+    background-color: var(--light-transparent);
+    border: dotted var(--dark);
+    border-radius: 0.5rem;
+  }
+  .contact-form {
+    background-color: var(--light-transparent);
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+  }
+
+  .form-row {
+    margin-bottom: 1.25rem;
+  }
+
+  .form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+    font-size: 1.1rem;
+    font-size: clamp(1.1rem, 1rem + 0.5vw, 1.25rem);
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: 0.625rem;
+    border: 0.063rem solid #ccc;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    color: var(--dark);
+  }
+
+  .form-textarea {
+    resize: vertical;
+  }
+
+  .button {
+    background-color: var(--primary);
+    color: var(--light);
+    border: none;
+    padding: 0.75rem 1.25rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: var(--secondary);
+  }
+</style>

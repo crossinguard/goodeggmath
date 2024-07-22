@@ -6,8 +6,8 @@
   width: 90%;
   max-width: 800px;
   margin-inline: auto;
-  color: var(--light);
-  background-color: var(--dark);
+  /* color: var(--light);
+  background-color: var(--dark); */
   padding: 1em;
 
   & p {
@@ -39,6 +39,13 @@
     ),
     url('../assets/memphis.svg');
   background-size: 30%;
+}
+
+.ask {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.15rem;
+  display: inline-block;
 }
 
 .sr-only:not(:focus):not(:active) {
