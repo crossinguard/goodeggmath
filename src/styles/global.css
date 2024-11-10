@@ -38,11 +38,13 @@ h5 {
 }
 
 a {
-  color: var(--primary);
+  color: inherit;
   transition: var(--transition);
   text-underline-offset: 0.25em;
+  text-decoration-color: var(--primary);
 }
 
 a:hover {
   color: var(--secondary);
+  text-decoration-color: var(--secondary);
 }
