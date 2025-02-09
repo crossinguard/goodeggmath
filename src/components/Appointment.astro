@@ -1,0 +1,36 @@
+---
+const label = "Book your free appointment now!"
+const link = "https://zcal.co/goodeggmath/tutoring"
+---
+
+<div class="center">
+  <button class="skew">
+    <a href={link} target="_blank">{label}</a>
+  </button>
+</div>
+
+<style>
+  button {
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    background-color: var(--primary);
+    padding: 1em;
+    margin-block: 1rem;
+    transition: var(--transition);
+    box-shadow: 0.2rem 0.15rem transparent;
+    border: none;
+    a {
+      color: var(--light);
+      font-weight: 700;
+      font-size: 1.5rem;
+      display: block;
+      text-decoration: none;
+      text-shadow: 0.05rem 0.1rem var(--dark);
+      filter: drop-shadow(0 0 0.1rem var(--dark));
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+</style>

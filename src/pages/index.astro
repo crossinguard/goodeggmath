@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Button from '../components/Button.astro';
 import { Icon } from 'astro-icon/components';
 import Contact from '../components/Contact.astro';
+import Appointment from '../components/Appointment.astro';
 
 // import '../styles/mdx.css';
 
@@ -11,18 +12,21 @@ const title = 'Home';
 
 <BaseLayout title={title}>
   <section class="content shadow tutoring">
-    <h1>Free Math Help</h1>
+    <h1>Free Math Tutoring</h1>
     <div class="tutoring-when">
-      <h2>Appointment Availability</h2>
+      <!-- <h2>Appointment Availability</h2> -->
       <Icon name="calendar-check" /> 
+      <p>In-person @Sumas Library</p>
       <p>Mondays, Wednesdays</p>
       <p>3pm - 6pm</p>
-      <p>at the Sumas Library</p>
     </div>
     <p>
-      Free tutoring is <strong>available by appointment</strong> every Monday & Wednesday that the Sumas Library is open.  Schedule a time to meet at the Sumas Library by sending an email to <a href="mailto:info@goodeggmath.com">info@goodeggmath.com</a> or by filling out the <a href="#contact">contact form</a>.
+      Free tutoring is <strong>available by appointment</strong> every Monday & Wednesday that the Sumas Library is open.  Click the button below to check my availability and schedule a time to meet.
     </p>
-    <Button text="Find out more!" link="/tutoring" />
+    <Appointment />
+    <p>
+      Check out the <a href="/tutoring">tutoring page</a> for more information about how tutoring works, or the <a href="/about">about page</a> to find out more about me.
+    </p>
   </section>
   <section class="content free-content">
     <h2>Free free?</h2>
@@ -87,6 +91,7 @@ const title = 'Home';
     min-width: fit-content;
     max-width: 75%;
     margin-inline: auto;
+    padding-inline: 0.5rem;
     p {
       padding: 0;
     }
