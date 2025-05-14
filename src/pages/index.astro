@@ -1,42 +1,51 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Button from '../components/Button.astro';
-import { Icon } from 'astro-icon/components';
-import Contact from '../components/Contact.astro';
-import Appointment from '../components/Appointment.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+// import Button from "../components/Button.astro";
+// import { Icon } from "astro-icon/components";
+import Contact from "../components/Contact.astro";
+// import Appointment from "../components/Appointment.astro";
 
 // import '../styles/mdx.css';
 
-const title = 'Home';
+const title = "Home";
 ---
 
 <BaseLayout title={title}>
   <section class="content shadow tutoring">
-    <h1>Free Math Tutoring</h1>
-    <div class="tutoring-when">
-      <!-- <h2>Appointment Availability</h2> -->
-      <Icon name="calendar-check" /> 
+    <h1>Thanks for stopping by</h1>
+    <!-- <div class="tutoring-when">
+      <h2>Appointment Availability</h2>
+      <Icon name="calendar-check" />
       <p>In-person @Sumas Library</p>
       <p>Mondays, Wednesdays</p>
       <p>3pm - 6pm</p>
-    </div>
+    </div> -->
     <p>
-      Free tutoring is <strong>available by appointment</strong> every Monday & Wednesday that the Sumas Library is open.  Click the button below to check my availability and schedule a time to meet.
+      From June 2024 through May 2025 I offered free math tutoring at the Sumas
+      Library. Unfortunately my schedule no longer allows this, but I hope to
+      one day offer this again. Please reach out if you have any questions.
     </p>
-    <Appointment />
+    <!-- <Appointment /> -->
     <p>
-      Check out the <a href="/tutoring">tutoring page</a> for more information about how tutoring works, or the <a href="/about">about page</a> to find out more about me.
+      Check out the <a href="/tutoring">tutoring page</a> for more information about
+      how tutoring works, or the <a href="/about">about page</a> to find out more
+      about me.
     </p>
   </section>
   <section class="content free-content">
     <h2>Free free?</h2>
-    <p>Yes. I am volunteering my time and skills to serve my community. This is not a free trial, it is a free service.</p>
+    <p>
+      Yes. I am volunteering my time and skills to serve my community. This is
+      not a free trial, it is a free service.
+    </p>
   </section>
   <section class="categories">
     <h2>Who is this for?</h2>
     <div class="content">
       <p>
-        If you fall into any of the following categories, then a <span class="callout">free math tutoring session</span> may be for you!
+        If you fall into any of the following categories, then a <span
+          class="callout">free math tutoring session</span
+        > may be for you!
       </p>
       <ul class="categories-list">
         <li>home-schoolers, summer-schoolers, and school-shoolers</li>
@@ -71,11 +80,11 @@ const title = 'Home';
     padding: 0.5rem 1rem;
   }
   h1::before {
-    content: '{ ';
+    content: "{ ";
     color: var(--primary);
   }
   h1::after {
-    content: ' }';
+    content: " }";
     color: var(--primary);
   }
   h2 {
